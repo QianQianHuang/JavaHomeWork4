@@ -34,12 +34,10 @@ import java.util.* ;
 
             }
 
-            for(int i = 0 ; i < TruckList.size() ; i ++)
-            {
-                TruckList.get(i).showInfo() ;
-                BusList.get(i).showInfo() ;
-                SedanList.get(i).showInfo() ;
-            }
+            System.out.println(TruckList.get(TruckList.size()-1).showInfo()) ;
+            System.out.println(TruckList.get(BusList.size()-1).showInfo()) ;
+            System.out.println(SedanList.get(SedanList.size()-1).showInfo()) ;
+           
             
             System.out.println("Total Obj : " + Car.counts) ;
             System.out.println("End") ;
