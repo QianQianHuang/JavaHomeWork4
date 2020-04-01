@@ -12,14 +12,12 @@ public class Sedan extends Car{
 
     public Sedan()
     {
+        super() ;
         setSedan() ;
     }
 
     public void setSedan()
     {
-        // ----sedan has been created----
-        System.out.println("Sedan : ") ;
-
         // ----peoplenum----
         System.out.println("Set PeopleNum : ") ;
         String newPeopleNum = scn.next() ;
@@ -38,18 +36,30 @@ public class Sedan extends Car{
         this.use = newUse ;
     }
 
-    public void showInfo()
-    {  
-        System.out.println() ;
-        System.out.println("Sedan : ") ;
-        System.out.println("Sedan Color is : " + color) ;
-        System.out.println("Sedan Capacicy is : " + capacicy) ;
-        System.out.println("Sedan PowerType is : " + powertype) ;
-        System.out.println("Sedan Year is : " + year) ;
-        System.out.println("Sedan Weight is : " + weight) ;
-        System.out.println("Sedan Displacement is : " + displacement) ;
-        System.out.println("Sedan PeopleNum is : " + peoplenum) ;
-        System.out.println("Sedan Type is : " + type) ;
-        System.out.println("Sedan Use is : " + use) ;
+    // ----get peoplenum----
+    public String getPeopleNum()
+    {
+        return this.peoplenum ;
+    }
+
+    // ----get type----
+    public String getType()
+    {
+        return this.type ;
+    }
+
+    // ----get use----
+    public String getUse()
+    {
+        return this.use ;
+    }
+
+    public String showInfo()
+    {
+        return " Sedan Color is : " + this.getColor() + "\n Sedan Capacicy is : " + this.getCapacicy() 
+        + "\n Sedan PowerType is : " + this.getPowerType() +  "\n Sedan Year is : " + this.getYear() 
+        + "\n Sedan Weight is : " + this.getWeight() +  "\n Sedan Displacement is : " + this.getDisplacement() 
+        + "\n Sedan PeopleNum is : " + this.getPeopleNum() + "\n Sedan Type is : " + this.getType() 
+        + "\n Sedan Use is : " + this.getUse() + "\n" ;
     }
 }
