@@ -4,48 +4,52 @@
 import java.util.* ;
  public class Truck extends Car{
  
- private String goodcapacicy ;
- private String tairnum ;
-//  public static int counts = 0 ;
- Scanner scn = new Scanner(System.in) ;
+   private String goodcapacicy ;
+   private String tairnum ;
 
- public Truck()
- {
+   Scanner scn = new Scanner(System.in) ;
+
+   public Truck()
+   {
      setTruck() ;
-     
-     //counts ++ ;
- }
+   }
 
- public void setTruck()
- {
-    //  ----truck has been created----
-    System.out.println("Truck : ") ;
+   public void setTruck()
+   {
+      
+   // ----goodcapacicy----
+      System.out.println() ;
+      System.out.println("Set GoodCapacicy : ") ;
+      String newGoodCapacicy = scn.next() ;
+      this.goodcapacicy = newGoodCapacicy ;
 
-    // ----goodcapacicy----
-    System.out.println() ;
-    System.out.println("Set GoodCapacicy : ") ;
-    String newGoodCapacicy = scn.next() ;
-    this.capacicy = newGoodCapacicy ;
+      // ----tairnum----
+      System.out.println() ;
+      System.out.println("Set TairNum : ") ;
+      String newTairNum = scn.next() ;
+      this.tairnum = newTairNum ;
+   } 
 
-    // ----tairnum----
-    System.out.println() ;
-    System.out.println("Set TairNum : ") ;
-    String newTairNum = scn.next() ;
-    this.tairnum = newTairNum ;
- }
+   // ----get GoodCapacicy----
+   public String getGoodCapacicy()
+   {
+      return this.goodcapacicy ;
+   }
 
- public void showInfo()
- {
-    System.out.println() ;
-    System.out.println("Truck : ") ;
-    System.out.println("Truck Color is : " + color) ;
-    System.out.println("Truck Capacicy is : " + capacicy) ;
-    System.out.println("Truck PowerType is : " + powertype) ;
-    System.out.println("Truck Year is : " + year) ;
-    System.out.println("Truck Weight is : " + weight) ;
-    System.out.println("Truck Displacement is : " + displacement) ;
-    System.out.println("Truck GoodCapacicy is : " + goodcapacicy) ;
-    System.out.println("Truck TairNum is : " + tairnum) ;
- }
-    
+   // ----getTairNum----
+   public String getTairNum()
+   {
+      return this.tairnum ;
+   }
+
+   public String showInfo()
+   {
+      return " Truck Color is : " + this.getColor() + "\n Truck Capacicy is : " + this.getCapacicy() 
+      + "\n Truck PowerType is : " + this.getPowerType() +  "\n Truck Year is : " + this.getYear() 
+      + "\n Truck Weight is : " + this.getWeight() +  "\n Truck Displacement is : " + this.getDisplacement() 
+      + "\n Truck GoodCapacicy is : " + this.getGoodCapacicy() + "\n Truck TairNum is : " + this.getTairNum() 
+      + "\n" ;
+      
+   }
+   
 }
